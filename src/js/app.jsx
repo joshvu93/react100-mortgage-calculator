@@ -9,7 +9,7 @@ export default class App extends React.Component {
       term: "",
       output: "",
     };
-    this.changeInput = this.changeInput.bind(this);
+
     this.calcualte = this.calcualte.bind(this);
   }
 
@@ -23,25 +23,27 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <form class='for-horizontal'>
+      <form className='for-horizontal'>
         <div className='container'>
-          <html className='src/js/app.jsx'>
-            <title>Mortgage Calculator</title>
-          </html>
-          <body>
-            <h1>Mortgage Calculator</h1>
-            <label for="balance">Loan Balance </label>
-            <input name='balance' type='number' placeholder='0'></input>
-            <label for="rate">Interest Rate (%) </label>
-            <input name='rate' type='number' step='0.01' placeholder='0'></input>
-            <input for='term'>Loan Term (Years) </input>
-            <select name='term'>
-              <option value='15'>15</option>
-              <option value='30'>30</option>
-            </select>
-            <button name='submit'>Submit</button>
-            <div id='output' name='output'></div>
-          </body>
+          <h1>Mortgage Calculator</h1>
+          <div>
+            <label>Loan Balance</label>
+            <input className='balance' type='number' placeholder='0'></input>
+          </div>
+          <div>
+            <label>Intrest Rate(%)</label>
+          <input className='rate' type='number' step='0.01' placeholder='0'></input>
+          </div>
+          <div>
+            <label>Loan Term (years)</label>
+            <select className='term'>
+            <option value='15'>15</option>
+            <option value='30'>30</option>
+          </select>
+          </div>
+   
+          <button className='submit'>Submit</button>
+          <div id='output' className='output'></div>
         </div>
       </form>
     );
