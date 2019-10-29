@@ -28,21 +28,20 @@ export default class App extends React.Component {
           <h1>Mortgage Calculator</h1>
           <div>
             <label>Loan Balance</label>
-            <input className='balance' type='number' placeholder='0'></input>
+            <input className="balance" type='number' placeholder='0'></input>
           </div>
           <div>
-            <label>Intrest Rate(%)</label>
-          <input className='rate' type='number' step='0.01' placeholder='0'></input>
+            <label>Interest Rate (%) </label>
+            <input className="rate" type='number' step='0.01' placeholder='0'></input>
           </div>
           <div>
-            <label>Loan Term (years)</label>
-            <select className='term'>
-            <option value='15'>15</option>
-            <option value='30'>30</option>
-          </select>
+            <label>Loan Term (years) </label>
+            <select className="term">
+              <option value='15'>15</option>
+              <option value='30'>30</option>
+            </select>
           </div>
-   
-          <button className='submit'>Submit</button>
+          <button className="submit">Submit</button>
           <div id='output' className='output'></div>
         </div>
       </form>
